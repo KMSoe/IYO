@@ -1,0 +1,74 @@
+.post{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #eee;
+    box-shadow: 0 3rem 5rem rgba($color: #000000, $alpha: 0.4);
+    border-radius: 3px;
+    padding: 5rem;
+    padding-left: 4rem;
+    transition: all 0.3s ease-in-out;
+
+    &__shape{
+        height: auto;
+        
+        // shape-outside: circle(50% at 50% 50%);
+        // clip-path:circle(50% at 50% 50%);
+
+    }
+    &__text{
+        padding-left: 3rem;
+        position: relative;
+
+        &--title{
+            color:#111;
+            font-size: 3rem;
+            font-weight: 400;
+            display: inline-block;
+        }
+    }
+    &:hover{
+        transform: translateY(-10px);
+    }
+    &:active{
+        transform: translateY(-5px);
+    }
+}
+.nav-toggle {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.hamburger {
+    & {
+        transition: all 0.5s ease-in-out;
+    }
+    .bars,
+    .bars::before,
+    .bars::after {
+        width: 3rem;
+        height: 3px;
+        background-color: #111;
+        transition: all 0.5s ease-in-out;
+    }
+    .bars {
+        position: relative;
+    }
+    .bars::before,
+    .bars::after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+    .bars::before {
+        transform: translateY(-8px);
+    }
+    .bars::after {
+        transform: translateY(8px);
+    }
+}
